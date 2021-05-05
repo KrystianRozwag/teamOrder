@@ -1,0 +1,20 @@
+.nav_element{
+    margin: 2rem;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+.nav_element:hover{
+    border: 1px solid rgb(180,180,180);
+    background-color: rgb(180,180,180);
+}
+nav{
+    width: 100%;
+}
+.active{
+    border: 1px solid rgb(100,100,100) !important;
+    background-color: rgb(100,100,100) !important;
+    color: white;
+}
+

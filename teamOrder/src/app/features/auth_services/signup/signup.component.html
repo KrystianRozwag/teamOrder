@@ -1,0 +1,26 @@
+<h2>TeamOrder</h2>
+<h2 class="banner">Signup your #team</h2>
+<form class="reg_form" [formGroup]="signUp">
+    <div class="form-group">
+        <label>Team Name</label><br>
+        <input type="text" formControlName="teamName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Email</label><br>
+        <input type="text" formControlName="email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Password</label><br>
+        <input type="password" formControlName="password" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Repeat Password</label><br>
+        <input type="password" formControlName="repeatedPassword" class="form-control" />
+    </div>
+    <button class="submit" (click)="sendData()">Sign in</button>
+</form>
+<div class="existing_monit">
+    <p *ngIf="isSomethingWentWrong">Sorry! Something went wrong, try again later</p>
+    <p *ngIf="passwordNotSatisfying"> Your password should contain at least 8 characters</p>
+    <p *ngIf="passwordsNotCompliant"> Passwords aren't matching</p>
+</div>

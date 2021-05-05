@@ -1,0 +1,17 @@
+<h3>Name</h3>
+<input placeholder="{{name}}">
+<h3>Adress</h3>
+<input placeholder="{{address}}"><br><br>
+<input type="button" value="Submit Changes">
+<h3>Actual schedule</h3>
+<div class="schedule"> 
+<table>
+<tr>
+    <td>Monday</td> <td>Tuesday</td> <td>Wednesday</td> <td>Thursday</td> <td>Friday</td> <td>Saturday</td> <td>Sunday</td>
+</tr>
+<tr>
+    <td>{{schedule.Mon}}</td> <td>{{schedule.Tue}}</td> <td>{{schedule.Wed}}</td> <td>{{schedule.Thu}}</td> <td>{{schedule.Fri}}</td> <td>{{schedule.Sat}}</td> <td>{{schedule.Sun}}</td>
+</tr>
+</table>
+</div>
+<button (click)="generateSchedule()" class="schedule_button"  mat-raised-button color="accent">Generate new schedule</button>

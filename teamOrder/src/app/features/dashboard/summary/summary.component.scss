@@ -1,0 +1,37 @@
+.single_request{
+    border: 1px solid black;
+    margin: 2rem;
+    display: flex;
+}
+.group_requests{
+    width: 100%;
+    margin: auto;
+}
+.data{
+    margin: 1rem;
+}
+.team_code{
+    background-color: grey;
+    height: 4rem;
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 0.5rem;
+    width: 100%;
+    color: white;
+}
+.team_code_text:hover{
+    color: rgb(200,200,200);
+}
+.orders{
+    margin: 3rem;
+}
+.small_title{
+    color: rgb(50,50,50);
+}
+.single_order{
+    border: 1px solid black;
+}
+.order_position{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}

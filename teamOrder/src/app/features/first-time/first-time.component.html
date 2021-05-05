@@ -1,0 +1,201 @@
+<div id="about-section" class="about-section" >
+    <div class="container">
+        <input type="radio" class="radio five" name="progress" value="five" id="five" (click)=toggleQuestions(0) checked>
+        <label for="five" class="label">Beginning</label>
+
+        <input type="radio" class="radio twentyfive" name="progress" value="twentyfive" id="twentyfive" (click)=toggleQuestions(1)>
+        <label for="twentyfive" class="label">Diet</label>
+
+        <input type="radio" class="radio fifty" name="progress" value="fifty" id="fifty" (click)=toggleQuestions(2)>
+        <label for="fifty" class="label">Food</label>
+
+        <input type="radio" class="radio seventyfive" name="progress" value="seventyfive" id="seventyfive" (click)=toggleQuestions(3)>
+        <label for="seventyfive" class="label">Allergic</label>
+
+        <input type="radio" class="radio onehundred" name="progress" value="onehundred" id="onehundred" (click)=toggleQuestions(4)>
+        <label for="onehundred" class="label">TeamCode</label>
+
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+    <div class="about-container">
+        <div data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c" class="reservation-form-container"
+            style="opacity: 1;transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);transform-style: preserve-3d;" data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c"  *ngIf="currentQuestion == 0">
+            <h2>Let Us Help You</h2>
+            <p class="text">Before You start enjoying great food with your great Team, please let us know about your diet preferences.</p>
+            <div class="reservation-form-block w-form" >
+                <form id="wf-form-Reservation-Form" name="wf-form-Reservation-Form" data-name="Reservation Form" *ngIf="currentQuestion == 0"
+                    class="contact-form" _lpchecked="1" style="
+display: flex;
+flex-direction: column;
+align-items: center;
+">
+                    <input type="submit" (click)=nextQue(0) value="Lets Begin!" data-wait="Please wait..."
+                        id="w-node-_2189f462-17bb-3621-fd4d-b0a096718bda-e802e01f" class="dark-button w-button btn-twentyfive" id="btn-twentyfive" onclick="document.getElementById('twentyfive').click();">
+                </form>
+            </div>
+        </div>
+
+                <form id="wf-form-Reservation-Form" name="wf-form-Reservation-Form" data-name="Reservation Form" [formGroup]="dietType" *ngIf="currentQuestion == 1"
+                    class="contact-form" _lpchecked="1" style="
+display: flex;
+flex-direction: column;
+align-items: center;
+">
+<div data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c" class="reservation-form-container"
+style="opacity: 1;transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);transform-style: preserve-3d;">
+
+<div class="reservation-form-block w-form">
+                    <h2>What is your type of diet?</h2>
+                    <div>
+                        <div class="box">
+                            <input id="one" type="checkbox" formControlName="vegan">
+                            <span class="check"></span>
+                            <label for="one">Vegan diet</label>
+                        </div>
+                        <div class="box">
+                            <input id="two" type="checkbox" formControlName="vege">
+                            <span class="check"></span>
+                            <label for="two">Vegetarian diet</label>
+                        </div>
+                        <div class="box">
+                            <input id="three" type="checkbox" formControlName="carb">
+                            <span class="check"></span>
+                            <label for="three">Low-calorie diet</label>
+                        </div>
+                        <div class="box">
+                            <input id="four" type="checkbox" formControlName="fat">
+                            <span class="check"></span>
+                            <label for="four">Low-fat diet</label>
+                        </div>
+                        <div class="box">
+                            <input id="fifth" type="checkbox" formControlName="carbhyd">
+                            <span class="check"></span>
+                            <label for="fifth">Low-carbohydrate diet</label>
+                        </div>
+                    </div>
+                    <p>If you don't have any special diet just leave it blank.</p>
+                    <input type="submit" (click)=nextQue(1) value="Next" data-wait="Please wait..."
+                        id="w-node-_2189f462-17bb-3621-fd4d-b0a096718bda-e802e01f" class="dark-button w-button" id="btn-fifty" onclick="document.getElementById('fifty').click();">
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c" class="reservation-form-container"
+            style="opacity: 1;transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);transform-style: preserve-3d;" data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c"  *ngIf="currentQuestion == 2">
+            <h2>Choose your favourite food</h2>
+            <div class="reservation-form-block w-form" >
+                <form id="wf-form-Reservation-Form" name="wf-form-Reservation-Form" data-name="Reservation Form"
+                    class="contact-form" _lpchecked="1" style="
+display: flex;
+flex-direction: column;
+align-items: center;
+" [formGroup]="favouriteFoods"><div>
+    <div class="box">
+        <input id="one" type="checkbox" formControlName="salads">
+        <span class="check"></span>
+        <label for="one">Meat</label>
+    </div>
+    <div class="box">
+        <input id="two" type="checkbox" formControlName="salads">
+        <span class="check"></span>
+        <label for="two">Salads</label>
+    </div>
+    <div class="box">
+        <input id="three" type="checkbox" formControlName="pizza">
+        <span class="check"></span>
+        <label for="three">Pizza</label>
+    </div>
+    <div class="box">
+        <input id="four" type="checkbox" formControlName="pasta">
+        <span class="check"></span>
+        <label for="four">Pasta</label>
+    </div>
+    <div class="box">
+        <input id="fifth" type="checkbox" formControlName="burgers">
+        <span class="check"></span>
+        <label for="fifth">Burgers</label>
+    </div>
+    <div class="box">
+        <input id="six" type="checkbox" formControlName="sushi">
+        <span class="check"></span>
+        <label for="six">Sushi</label>
+    </div>
+    <div class="box">
+        <input id="seven" type="checkbox" formControlName="soups">
+        <span class="check"></span>
+        <label for="seven">Soups</label>
+    </div>
+</div>
+                    <input type="submit" (click)=nextQue(2) value="Next" data-wait="Please wait..."
+                        id="w-node-_2189f462-17bb-3621-fd4d-b0a096718bda-e802e01f" class="dark-button w-button" id="btn-seventyfive" onclick="document.getElementById('seventyfive').click();">
+                </form>
+            </div>
+        </div>
+        <div data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c" class="reservation-form-container"
+            style="opacity: 1;transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);transform-style: preserve-3d;" data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c"  *ngIf="currentQuestion == 3">
+            <h2>I am allergic to:</h2>
+            <div class="reservation-form-block w-form" >
+                <form id="wf-form-Reservation-Form" name="wf-form-Reservation-Form" data-name="Reservation Form"
+                    class="contact-form" _lpchecked="1" style="
+display: flex;
+flex-direction: column;
+align-items: center;
+" [formGroup]="allergics"><div>
+    <div class="box">
+        <input id="one" type="checkbox" formControlName="gluten">
+        <span class="check"></span>
+        <label for="one">Gluten</label>
+    </div>
+    <div class="box">
+        <input id="two" type="checkbox" formControlName="nuts">
+        <span class="check"></span>
+        <label for="two">Nuts</label>
+    </div>
+    <div class="box">
+        <input id="three" type="checkbox" formControlName="lactose">
+        <span class="check"></span>
+        <label for="three">Lactose</label>
+    </div>
+    <div class="box">
+        <input id="four" type="checkbox" formControlName="wheat">
+        <span class="check"></span>
+        <label for="four">Wheat</label>
+    </div>
+    <div class="box">
+        <input id="fifth" type="checkbox" formControlName="soy">
+        <span class="check"></span>
+        <label for="fifth">Soy</label>
+    </div>
+</div>
+<p>NOTE! If you are allergic to other ingredients, please inform your Team Leader. Safety First!</p>
+                    <input type="submit" (click)=nextQue(3) value="Next" data-wait="Please wait..."
+                        id="w-node-_2189f462-17bb-3621-fd4d-b0a096718bda-e802e01f" class="dark-button w-button" id="btn-hundred" onclick="document.getElementById('onehundred').click();">
+                </form>
+            </div>
+        </div>
+
+                <form id="wf-form-Reservation-Form" name="wf-form-Reservation-Form" data-name="Reservation Form" [formGroup]="teamCode" *ngIf="currentQuestion == 4"
+                    class="contact-form" _lpchecked="1" style="
+display: flex;
+flex-direction: column;
+align-items: center;
+"><div data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c" class="reservation-form-container"
+style="opacity: 1;transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);transform-style: preserve-3d;" data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c">
+<h2>Final Step!</h2>
+<div class="reservation-form-block w-form" >
+    <p class="text">Please paste #TeamCode from your Team Leader...</p>
+    <input type="text" class="reservation-form-input-field w-node-_5cd3b785-7c3d-2b32-8ce1-977ab16cc04b-e802e01f w-input" formControlName="code"
+                        maxlength="256" name="code" data-name="code" placeholder="Team#ABC123"
+                        id="code" required><p class="text">and Your name!</p><input type="text" class="reservation-form-input-field w-node-d4f8c3b8-4c4e-53b3-39e2-d8ae3373dd9e-e802e01f w-input" formControlName="name"
+                        maxlength="256" name="name" data-name="name" placeholder="John"
+                        id="name" required>
+                    <input type="submit" (click)=nextQue(4) value="Next" data-wait="Please wait..."
+                        id="w-node-_2189f462-17bb-3621-fd4d-b0a096718bda-e802e01f" class="dark-button w-button">
+                    </div>
+                </div>
+                </form>
+
+</div>
+

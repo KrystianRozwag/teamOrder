@@ -1,0 +1,12 @@
+<div class="group_requests" *ngFor="let req of pendingRequests">
+    <div class="single_request">
+        <div class="data">
+            <p>{{req.name}}</p>
+            <p>{{req.privCode}}</p>
+        </div>
+        <div clas="data">
+            <button (click)="processRequest(req.name,true,req.privCode)" mat-raised-button color="accent" class="control">Confirm</button>
+            <button (click)="processRequest(req.name,true,req.privCode)" mat-raised-button color="warn" class="control">Deny</button>
+        </div>
+    </div>
+</div>

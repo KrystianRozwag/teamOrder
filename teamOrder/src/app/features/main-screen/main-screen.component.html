@@ -1,0 +1,59 @@
+<nav  mat-tab-nav-bar>
+        <h2 [routerLink]="">TeamOrder</h2>
+</nav>
+<div id="about-section" class="about-section">
+    <div class="about-container">
+        <div data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c" class="reservation-form-container"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+            <h2>First Time?</h2>
+            <div class="reservation-form-block w-form">
+                <form id="wf-form-Reservation-Form" name="wf-form-Reservation-Form" data-name="Reservation Form"
+                    class="contact-form" _lpchecked="1" style="
+display: flex;
+flex-direction: column;
+align-items: center;
+"><input type="submit" value="Create a PrivCode with Us!" [routerLink]="['/first-time']" data-wait="Please wait..."
+                        id="w-node-_2189f462-17bb-3621-fd4d-b0a096718bda-e802e01f" class="dark-button w-button">
+                </form>
+
+            </div>
+        </div>
+        <div data-w-id="bea69d2e-bd8a-05a7-498a-b998f097c179" class="about-info-container"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+            <div class="about-info-text">
+                <h2>I have <span class="title-colored-text">PrivCode</span><span class="title-colored-text"></span>
+                </h2>
+                <div class="title-divider"></div>
+                <p><strong>Enter a team code below and order your favourite food!</strong><br><br></p>
+            </div>
+            <div class="newsletter-form-block w-form">
+                <form id="email-form" name="email-form" data-name="Email Form" class="newsletter-form"  [formGroup]="privCode"><input
+                        formControlName="code" type="text" class="newslletter-input-field w-input" maxlength="256" name="Newsletter-Email"
+                        data-name="Newsletter Email" placeholder="Team Code" id="Newsletter-Email"
+                        required=""><input type="submit"(click)="submitCode()" data-wait="Please wait..."
+                        class="newsletter-form-button w-button"></form>
+            </div>
+        </div>
+        <div data-w-id="2595877d-ddc8-430a-c785-828db5cbdd1c" class="reservation-form-container reservation-form-container-r"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+            <h2>I am Team Leader</h2>
+            <div class="reservation-form-block w-form">
+                <form id="wf-form-Reservation-Form" name="wf-form-Reservation-Form" data-name="Reservation Form"
+                    class="contact-form" _lpchecked="1" style="
+display: flex;
+flex-direction: column;
+align-items: center;
+"><input type="submit" [routerLink]="['/login']" value="Log In" data-wait="Please wait..."
+                        id="w-node-_2189f462-17bb-3621-fd4d-b0a096718bda-e802e01f" class="dark-button w-button">
+                </form>
+                <div class="success-message w-form-done">
+                    <div>Reservation received! We will get back to you as soon as posible.</div>
+                </div>
+                <div class="error-message w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+<div class="team_code">
+    <h3>Your teamCode: <span  class="team_code_text" [cdkCopyToClipboard]="teamCode" matTooltip="Click to copy"> {{teamCode}} </span></h3>
+</div>
+<h3>Orders:</h3>
+<div class="orders">
+    <h4 class="small_title">Pending Orders</h4>
+    <div class="single_order" *ngIf="pendingOrder != undefined">
+        Order Date: {{pendingOrder.data}}<br>
+        Order No.:{{pendingOrder.orderNo}}<br>
+        <h4>List of orders:</h4>
+        <div class="order_position" *ngFor="let orderPosition of pendingOrder.orders">
+            Product: {{orderPosition.product.productName}}<br>
+            Price: {{orderPosition.product.productPrice}}<br>
+            Restaurant: {{orderPosition.product.restaurantName}}<br>
+            Code: {{orderPosition.privCode}}
+        </div><br>
+        Overall Price:{{pendingOrder.overallPrice}}<br>
+        <button (click)="placeOrder()"  mat-raised-button color="accent">Place order</button>
+    </div>
+    <h4 class="small_title">History</h4>
+    <div *ngIf="historyOfOrders != []">
+        <div class="single_order" *ngFor="let singleOrder of historyOfOrders">
+            Order Date: {{singleOrder.data}}<br>
+            Order No.:{{singleOrder.orderNo}}<br>
+            Overall Price:{{singleOrder.overallPrice}}
+        </div>
+    </div>
+</div>
+
+<h3>Mebers:</h3>
+<div class="group_requests" *ngFor="let member of members">
+    <div class="single_request">
+        <div class="data">
+            <p>{{member.name}}</p>
+            <p>{{member.privCode}}</p>
+        </div>
+</div>

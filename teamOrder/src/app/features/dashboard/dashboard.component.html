@@ -1,0 +1,7 @@
+<h1>Dashboard</h1>
+<nav>
+    <a class="nav_element" (click)="activate(1)" [ngClass]="{'active': activatedPage == 1}" routerLink="/summary">Summary</a>
+    <a class="nav_element" (click)="activate(2)" [ngClass]="{'active': activatedPage == 2}"  routerLink="/settings">Settings</a>
+    <a class="nav_element" (click)="activate(3)" [ngClass]="{'active': activatedPage == 3}" routerLink="/join_requests">Requests</a>
+</nav>
+<router-outlet></router-outlet>

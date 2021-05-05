@@ -1,0 +1,48 @@
+<div id="about-section" class="about-section">
+    <div class="restaurant-container">
+        <div class="header">
+            <h2>Today in Menu</h2>
+        </div>
+        <div class="restaurant">
+            <button class='resta'>
+            <div class="rest_photo"><img
+                    src="https://via.placeholder.com/465x320" />
+            </div>
+            <div class="rest_body">
+                <h4 class="restaurant-title">{{mainProd.restaurantName}}</h4>
+                <h5 class="title">{{mainProd.productName}}</h5>
+                <p class="text">{{mainProd.productPrice}}PLN</p>
+
+
+            </div>
+        </button>
+        </div>
+        <h3>Other from {{mainProd.restaurantName}}</h3>
+        <div class="rest" *ngFor="let prod of products">
+
+
+
+            <div class="restaurant" (click)="selectProd(prod._id)">
+                <button class='resta'>
+                <div class="rest_photo"><img
+                        src="https://via.placeholder.com/465x320" />
+                </div>
+                <div class="rest_body">
+                    <h4 class="restaurant-title">{{prod.restaurantName}}</h4>
+                    <h5 class="title">{{prod.productName}}</h5>
+                    <p class="text">{{prod.productPrice}}PLN</p>
+                </div>
+            </button>
+            </div>
+
+        </div>
+        <div class="buttons">
+            <input type="submit" [routerLink]="['/']" value="Cancel Order" data-wait="Please wait..."
+                id="w-node-_2189f462-17bb-3621-fd4d-b0a096718bda-e802e01f" class="dark-button w-button">
+            <input type="submit" [routerLink]="['/']" value="Place Order" data-wait="Please wait..."
+                id="w-node-_2189f462-17bb-3621-fd4d-b0a096718bda-e802e01f" class="dark-button w-button"
+                (click)="placeOrder()">
+        </div>
+      <p *ngIf="isOrderPossible==false">Your TeamLeader hasn't confirmed your code yet. Please be patient.</p>
+
+    </div>
